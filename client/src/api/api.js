@@ -4,7 +4,7 @@ import axios from 'axios';
 // Create a new 'instance' of axios
 const api = axios.create({
   // This is the base URL of your backend server
-  baseURL: 'http://localhost:5000/api', 
+  baseURL: 'https://backend-blog-project-5lv7.onrender.com/api', 
 });
 
 /*
