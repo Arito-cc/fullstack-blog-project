@@ -1,6 +1,7 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { useAuth } from "../context/AuthContext";
+import { useAuth } from "../context/AuthContext.jsx"; // 💡 Fix: Added .jsx extension
+import logo from "../assets/Emblem.svg"; // 1. Import the logo
 
 const Navbar = () => {
   const { user, logout } = useAuth();
@@ -19,9 +20,16 @@ const Navbar = () => {
         {/* ✴ Logo / Brand */}
         <Link
           to="/"
-          className="font-['Playfair_Display'] text-3xl sm:text-4xl text-[#2d2926] tracking-wide hover:text-[#5a4632] transition-colors duration-300"
+          // 💡 2. Make the Link a flex container
+          className="flex items-center space-x-3 font-['Playfair_Display'] text-3xl sm:text-4xl text-[#2d2926] tracking-wide hover:text-[#5a4632] transition-colors duration-300"
         >
-          VintageVerse
+          {/* 💡 3. Add the img tag */}
+          <img
+            src={logo}
+            alt="VintageVerse Emblem"
+            className="h-10 sm:h-12 w-auto" // Control the logo size
+          />
+          <span>VintageVerse</span>
         </Link>
 
         {/* 🔗 Navigation Links */}
@@ -40,7 +48,7 @@ const Navbar = () => {
               <button
                 onClick={handleLogout}
                 className="text-[#5e5145] hover:text-[#a44a3f] border border-transparent hover:border-[#a44a3f]/40
-                           px-4 py-2 rounded-md text-sm font-medium transition-all duration-300"
+                            px-4 py-2 rounded-md text-sm font-medium transition-all duration-300"
               >
                 Logout
               </button>
@@ -59,7 +67,7 @@ const Navbar = () => {
               <Link
                 to="/register"
                 className="bg-[#3b2f2f] text-[#fdfaf6] px-4 py-2 rounded-md text-sm font-semibold
-                           hover:bg-[#2e2624] transition-all duration-300 shadow-sm shadow-[#00000022]"
+                            hover:bg-[#2e2624] transition-all duration-300 shadow-sm shadow-[#00000022]"
               >
                 Register
               </Link>
@@ -72,3 +80,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
