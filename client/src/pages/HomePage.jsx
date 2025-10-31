@@ -122,22 +122,7 @@ const HomePage = () => {
 
                                 <button
                                     type="submit"
-                                    className="
-    w-full
-    bg-gradient-to-b from-[#3E2C20] to-[#1F120D]
-    text-[#FAEBD7]
-    py-2.5
-    rounded-md
-    font-semibold
-    tracking-wide
-    shadow-[0_4px_0_rgba(0,0,0,0.25)]
-    border border-[#2B1C12]
-    transition-all duration-300
-    hover:from-[#4F3625]
-    hover:to-[#2E1B10]
-    hover:shadow-[0_6px_12px_rgba(0,0,0,0.35)]
-    active:translate-y-[2px]
-  "
+                                    className="w-full bg-[#3e2f26] text-[#fffaf2] py-2 rounded-md font-semibold tracking-wide hover:bg-[#2a1f1b] transition-colors duration-200"
                                 >
                                     📌 Pin to Board
                                 </button>
