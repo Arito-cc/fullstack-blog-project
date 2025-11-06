@@ -64,16 +64,22 @@ Follow these simple steps to run **VintageVerse** locally 👇
 ---
 
 ### 1️⃣ Backend Setup (`/server` folder)
-```bash
+
 # Clone the repository
+
+```bash
 git clone https://github.com/Arito-cc/vintageverse.git
 cd vintageverse/server
+```
 
 # Install dependencies
+
+```bash
 npm install
+```
 
 # Create a .env file inside /server
-```
+
 
 ```env
 MONGO_URI=your_mongodb_connection_string_here
@@ -97,16 +103,13 @@ cd ../client
 
 # Install dependencies
 npm install
-
-# In client/src/api/api.js, set your API base URL
 ```
-
+# In client/src/api/api.js, set your API base URL
 ```js
 baseURL: 'http://localhost:5000/api'
 ```
-
-```bash
 # Run the frontend
+```bash
 npm run dev
 ```
 
